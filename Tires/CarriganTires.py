@@ -1,9 +1,11 @@
-class CarriganTires():
-    def __init__(self):
-        pass
+from tire import Tire
 
-    def needs_service(self, tires_wear):
-        for tire in tires_wear:
+class CarriganTires(Tire):
+    def __init__(self, tires_wear):
+        self.tires_wear = tires_wear
+
+    def needs_service(self):
+        for tire in self.tires_wear:
             if (tire >= 0.9):
                 return True  
         return False

@@ -1,9 +1,11 @@
-class OctoprimeTires():
-    def __init__(self):
-        pass
+from tire import Tire
 
-    def needs_service(self, tires_wear):
-        if (sum(tires_wear) >= 3):
+class OctoprimeTires(Tire):
+    def __init__(self, tires_wear):
+        self.tires_wear = tires_wear
+
+    def needs_service(self):
+        if (sum(self.tires_wear) >= 3):
             return True
         else:
             return False
