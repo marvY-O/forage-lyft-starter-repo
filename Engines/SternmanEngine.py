@@ -1,4 +1,4 @@
-from mine.Engine import Engine
+from Engine import Engine
 
 class SternmanEngine(Engine):
     def __init__(self, warning_light):

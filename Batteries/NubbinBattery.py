@@ -1,4 +1,4 @@
-from mine.Battery import Battery
+from Battery import Battery
 
 class NubbinBattery(Battery):
     def __init__(self, last_service_date, current_date):
@@ -6,7 +6,7 @@ class NubbinBattery(Battery):
         self.current_date = current_date   
     
     def needs_service(self):
-        if (self.current_date - self.last_service_date)/365 >= 4:
+        if (self.current_date - self.last_service_date).days/365 >= 4:
             return True
         else:
             return False 
